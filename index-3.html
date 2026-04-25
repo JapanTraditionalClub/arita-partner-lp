@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>有田焼 海外展開パートナー募集 | 窯元向けLP</title>
+  <meta name="description" content="海外営業・販売管理は当方が担当。窯元は製造・品質・撮影・梱包発送に集中できる、有田焼の海外展開パートナー募集LP。" />
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --bg-2: #faf7f2;
+      --surface: rgba(255,255,255,0.78);
+      --surface-strong: #fffdf9;
+      --text: #191513;
+      --muted: #655d56;
+      --line: rgba(25, 21, 19, 0.08);
+      --gold: #9e7b45;
+      --gold-deep: #7d5c2e;
+      --navy: #1f2535;
+      --wine: #6d2232;
+      --shadow: 0 20px 60px rgba(25, 21, 19, 0.08);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      line-height: 1.75;
+      background:
+        radial-gradient(circle at top left, rgba(158,123,69,0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(109,34,50,0.05), transparent 24%),
+        linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(250,247,242,0.84);
+      border-bottom: 1px solid rgba(25,21,19,0.06);
+    }
+
+    .nav {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(158,123,69,0.34);
+      background: rgba(255,255,255,0.65);
+      color: var(--gold-deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      padding: 72px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .card,
+    .hero-copy,
+    .hero-panel,
+    .role-panel,
+    .faq-item,
+    .contact-box,
+    .process-step,
+    .section-shell {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy,
+    .hero-panel,
+    .contact-box,
+    .section-shell { padding: 34px; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid rgba(158,123,69,0.18);
+      color: var(--gold-deep);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.8rem);
+      max-width: 11ch;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      max-width: 12ch;
+    }
+
+    h3 {
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+    }
+
+    p { margin: 0; }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 60ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.18s ease, opacity 0.18s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--wine), var(--gold-deep));
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(25,21,19,0.08);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .mini {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(25,21,19,0.06);
+      background: rgba(255,255,255,0.68);
+    }
+
+    .mini-label {
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 7px;
+    }
+
+    .mini strong {
+      display: block;
+      font-size: 0.96rem;
+      line-height: 1.45;
+    }
+
+    .hero-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      justify-content: space-between;
+    }
+
+    .ceramic-art {
+      min-height: 320px;
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(circle at 18% 28%, rgba(255,255,255,0.22), transparent 16%),
+        radial-gradient(circle at 68% 32%, rgba(255,255,255,0.16), transparent 13%),
+        radial-gradient(circle at 50% 62%, rgba(255,255,255,0.10), transparent 16%),
+        linear-gradient(135deg, rgba(31,37,53,0.96), rgba(109,34,50,0.92));
+    }
+
+    .plate,
+    .cup,
+    .tile {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: inset 0 0 0 12px rgba(255,255,255,0.02), 0 16px 30px rgba(0,0,0,0.18);
+    }
+
+    .plate {
+      width: 180px; height: 180px; left: 42px; top: 34px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.28), rgba(255,255,255,0.02) 45%), linear-gradient(145deg, #efe7da, #c8baa1);
+    }
+
+    .cup {
+      width: 108px; height: 108px; right: 54px; top: 54px;
+      background: radial-gradient(circle at 34% 34%, rgba(255,255,255,0.26), rgba(255,255,255,0.03) 42%), linear-gradient(145deg, #d4d8de, #7a8796);
+    }
+
+    .tile {
+      width: 140px; height: 140px; left: 150px; bottom: 38px;
+      background: radial-gradient(circle at 34% 34%, rgba(255,255,255,0.16), rgba(255,255,255,0.02) 45%), linear-gradient(145deg, #8d2436, #4b1623);
+    }
+
+    .panel-note {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.9);
+      color: var(--text);
+    }
+
+    .panel-note strong { display: block; margin-bottom: 6px; }
+
+    .section {
+      padding: 14px 0 38px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+
+    .section-tag {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-deep);
+      margin-bottom: 10px;
+    }
+
+    .section-desc {
+      max-width: 52ch;
+      color: var(--muted);
+    }
+
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .card { padding: 26px; }
+
+    .card-number,
+    .icon-chip,
+    .step-no {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: rgba(158,123,69,0.10);
+      color: var(--gold-deep);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .card p { color: var(--muted); }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+    }
+
+    .solution-lead {
+      padding: 34px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.62));
+      box-shadow: var(--shadow);
+    }
+
+    .solution-lead p {
+      color: var(--muted);
+      margin-top: 16px;
+      max-width: 50ch;
+    }
+
+    .assurance-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .assurance {
+      padding: 22px;
+      border-radius: 22px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .assurance h3 { font-size: 1.24rem; }
+    .assurance p { color: var(--muted); }
+
+    .roles-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .role-panel {
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-panel.you {
+      border: 2px dashed rgba(25,21,19,0.28);
+      background: linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,255,255,0.62));
+    }
+
+    .role-panel.kiln {
+      border: 2px dashed rgba(109,34,50,0.36);
+      background: linear-gradient(180deg, rgba(255,248,250,0.88), rgba(255,244,245,0.70));
+    }
+
+    .role-label {
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    .kiln .role-label { color: var(--wine); }
+
+    .role-items {
+      display: grid;
+      gap: 14px;
+    }
+
+    .role-item {
+      padding: 18px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(25,21,19,0.07);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .role-item small {
+      display: block;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 6px;
+      line-height: 1.65;
+    }
+
+    .feature-note {
+      margin-top: 16px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(31,37,53,0.94);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.96rem;
+    }
+
+    .process-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 68px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 24px;
+    }
+
+    .process-step p { color: var(--muted); }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      padding: 22px 24px;
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.03rem;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item p { margin-top: 14px; color: var(--muted); }
+
+    .contact-wrap { padding: 10px 0 76px; }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.84), rgba(248,241,232,0.78));
+    }
+
+    .contact-copy p {
+      color: var(--muted);
+      margin-top: 16px;
+      max-width: 54ch;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    .contact-note {
+      font-size: 0.92rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hidden { display: none !important; }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .solution-grid,
+      .contact-box,
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .roles-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-stats { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .nav { min-height: 72px; }
+      .nav-links { display: none; }
+      .hero,
+      .section,
+      .contact-wrap { padding-top: 24px; }
+      .hero-grid,
+      .solution-grid,
+      .contact-box,
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .roles-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-copy,
+      .hero-panel,
+      .section-shell,
+      .contact-box,
+      .solution-lead,
+      .card,
+      .role-panel,
+      .process-step,
+      .faq-item { padding: 22px; }
+      .section-head {
+        flex-direction: column;
+        align-items: start;
+      }
+      .process-step {
+        grid-template-columns: 56px 1fr;
+      }
+      h1 { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="brand-mark">A</span>
+        <span id="brandName">ARITA EXPORT PARTNER</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#pain">悩み</a>
+        <a href="#solution">解決策</a>
+        <a href="#roles">役割分担</a>
+        <a href="#features">特徴</a>
+        <a href="#process">導入の流れ</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">有田焼の海外展開パートナー募集</div>
+          <h1>海外営業は当方が担います。<br>窯元は、ものづくりに集中してください。</h1>
+          <p class="lead">
+            高級和食・寿司・ホテル・調達案件に向けた有田焼の海外販売を、役割分担を明確にした形で進める窯元向けLPです。
+            英語営業や販路開拓は当方が担当し、窯元には製造・品質・撮影・梱包発送の実務に集中していただく前提で設計しています。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">窯元パートナー相談を申し込む</a>
+            <a class="btn btn-secondary" href="#roles">役割分担を見る</a>
+          </div>
+          <div class="hero-stats">
+            <div class="mini">
+              <div class="mini-label">狙う市場</div>
+              <strong>高級寿司・割烹・懐石・ホテルダイニング・ディストリビューター</strong>
+            </div>
+            <div class="mini">
+              <div class="mini-label">始め方</div>
+              <strong>3〜8 SKU程度の小さな提案から始め、継続受注へつなげる</strong>
+            </div>
+            <div class="mini">
+              <div class="mini-label">窯元にお願いすること</div>
+              <strong>製造・焼成、チェックリストに沿った撮影、梱包、発送対応</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="ceramic-art" aria-hidden="true">
+            <div class="plate"></div>
+            <div class="cup"></div>
+            <div class="tile"></div>
+          </div>
+          <div class="panel-note">
+            <strong>“営業しなくていいなら参加しやすい” と思える設計にしています。</strong>
+            問い合わせ前に必要な情報が見えるよう、役割分担、流れ、実務条件、FAQを1ページで整理しています。
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="pain">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">悩み</div>
+            <h2>海外販売に興味があっても、窯元単独では進めにくい理由があります。</h2>
+          </div>
+          <p class="section-desc">
+            品質や世界観に自信があっても、販路開拓、英語対応、価格条件の提示、継続発注への備え、写真・梱包・発送の基準づくりまでを一度に抱えるのは大きな負担です。
+          </p>
+        </div>
+        <div class="grid-4">
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>営業と英語対応が重い</h3>
+            <p>海外との窓口づくりや初回提案は、製造とは別の時間と準備が必要です。</p>
+          </article>
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>売れる先が見えにくい</h3>
+            <p>どの国・どの業態に、どんな器が合うのかが見えないと、販路づくりは進みません。</p>
+          </article>
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>出荷実務の基準が不安</h3>
+            <p>写真、梱包、破損対策、発送後の再発注条件まで揃わないと、継続取引になりにくくなります。</p>
+          </article>
+          <article class="card">
+            <div class="card-number">04</div>
+            <h3>支払いと継続受注が気になる</h3>
+            <p>小ロットから始めるときほど、支払い条件や次回発注の見通しが明確であることが重要です。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solution">
+      <div class="container solution-grid">
+        <div class="solution-lead">
+          <div class="section-tag">解決策</div>
+          <h2>“窯元は作ることに集中する” ための海外展開モデルです。</h2>
+          <p>
+            当方が海外営業・販売管理・顧客対応・入金管理を持ち、窯元には製造・品質・撮影・梱包発送の実務に集中していただきます。
+            初回から大きく広げるのではなく、相性の良いSKUを絞って小さく始め、継続受注と再発注につなげる設計です。
+          </p>
+          <div class="feature-note">
+            高級和食・寿司・ホテル市場では、ただブランド説明をするだけでなく、料理演出にどう効くか、補充しやすいか、サンプルや再発注がしやすいかが重視されます。
+          </div>
+        </div>
+
+        <div class="assurance-list">
+          <article class="assurance">
+            <h3>営業と顧客対応は当方が担当</h3>
+            <p>英語での一次対応、販路開拓、提案、商談の管理は当方で進めます。</p>
+          </article>
+          <article class="assurance">
+            <h3>小さく始める前提</h3>
+            <p>3〜8 SKU程度の提案から入り、価格表・MOQ・納期・破損時対応・補充条件を揃えて展開します。</p>
+          </article>
+          <article class="assurance">
+            <h3>チェックリストで実務を標準化</h3>
+            <p>商品写真、梱包、発送の品質がぶれないように、窯元側の実務はチェックリストで明確化します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roles">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">役割分担</div>
+            <h2>誰が何を担当するのかを、最初から明確にします。</h2>
+          </div>
+          <p class="section-desc">
+            海外販売でズレが起きやすいのは、営業・見積・撮影・梱包・発送・支払いの担当範囲が曖昧なときです。
+            役割を明文化することで、窯元は参加判断をしやすくなります。
+          </p>
+        </div>
+
+        <div class="roles-grid">
+          <section class="role-panel you">
+            <div class="role-label">当方が担当すること</div>
+            <div class="role-items">
+              <div class="role-item">① 製品仕様書の作成・見積作成
+                <small>提案時に必要なSKU整理、条件整理、初回見積の土台づくりを行います。</small>
+              </div>
+              <div class="role-item">② 海外営業・販路開拓
+                <small>ディストリビューター、ホテル、レストラン、調達案件への営業導線を設計します。</small>
+              </div>
+              <div class="role-item">③ 販売管理・顧客対応
+                <small>問い合わせ対応、商談進行、条件調整、継続発注の管理を当方で持ちます。</small>
+              </div>
+              <div class="role-item">④ 入金管理
+                <small>支払い条件の整理と回収管理を行い、窯元側の負担を減らします。</small>
+              </div>
+            </div>
+          </section>
+
+          <section class="role-panel kiln">
+            <div class="role-label">窯元にお願いしたいこと</div>
+            <div class="role-items">
+              <div class="role-item">① 製造・焼成
+                <small>得意な仕様・数量・納期感を共有いただき、品質を担保して製作していただきます。</small>
+              </div>
+              <div class="role-item">② チェックリストに基づく商品撮影
+                <small>寸法感、色味、質感、使用イメージが伝わる写真を、指定項目に沿って撮影していただきます。</small>
+              </div>
+              <div class="role-item">③ チェックリストに基づく梱包
+                <small>破損防止、検品記録、発送前確認を、共通の基準で運用します。</small>
+              </div>
+              <div class="role-item">④ 商品発送対応
+                <small>出荷の実務を担当いただき、必要に応じて写真や梱包状態の記録も残していただきます。</small>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">特徴・強み</div>
+            <h2>窯元が参加しやすく、海外で売りやすい条件を先に整えます。</h2>
+          </div>
+          <p class="section-desc">
+            “伝統があるから売れる” ではなく、“どの料理演出に効くか・どう継続受注しやすいか” を重視して進める設計です。
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon-chip">01</div>
+            <h3>小ロット・少SKUで始めやすい</h3>
+            <p>最初から品番を広げすぎず、相性の良い3〜8 SKU程度で市場検証しやすくします。</p>
+          </article>
+          <article class="card">
+            <div class="icon-chip">02</div>
+            <h3>高級和食・寿司・ホテル文脈で提案</h3>
+            <p>料理の見え方、空間との相性、プレゼンテーション価値を含めて提案します。</p>
+          </article>
+          <article class="card">
+            <div class="icon-chip">03</div>
+            <h3>必要条件を最初から整理</h3>
+            <p>価格表、MOQ、納期、破損時対応、補充条件をセットで提示できる形を目指します。</p>
+          </article>
+          <article class="card">
+            <div class="icon-chip">04</div>
+            <h3>写真・梱包・発送を標準化</h3>
+            <p>撮影や梱包の基準がぶれないように、チェックリストベースで運用しやすくします。</p>
+          </article>
+          <article class="card">
+            <div class="icon-chip">05</div>
+            <h3>営業を窯元に背負わせない</h3>
+            <p>英語営業や問い合わせ対応を当方が担当するため、窯元は製造実務に集中できます。</p>
+          </article>
+          <article class="card">
+            <div class="icon-chip">06</div>
+            <h3>継続発注を見据えた提案</h3>
+            <p>再発注のしやすさ、在庫の考え方、補充納期の見通しまで含めた関係づくりを重視します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">導入の流れ</div>
+            <h2>問い合わせ後の流れも、できるだけ明確にしています。</h2>
+          </div>
+          <p class="section-desc">
+            いきなり大きく始めるのではなく、参加可否の確認から、SKU整理、撮影・梱包基準の共有、初回提案へ進みます。
+          </p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step">
+            <div class="step-no">01</div>
+            <div>
+              <h3>まずは提携相談</h3>
+              <p>得意な作風、対応可能な数量、納期感、写真や梱包の対応可否を共有いただきます。</p>
+            </div>
+          </article>
+          <article class="process-step">
+            <div class="step-no">02</div>
+            <div>
+              <h3>相性の良いSKUを整理</h3>
+              <p>高級和食・寿司・ホテル文脈に合いやすい器を絞り、初回提案候補を決めます。</p>
+            </div>
+          </article>
+          <article class="process-step">
+            <div class="step-no">03</div>
+            <div>
+              <h3>仕様書とチェックリストを共有</h3>
+              <p>写真撮影、梱包、発送時に必要な確認項目を事前に明文化し、運用しやすくします。</p>
+            </div>
+          </article>
+          <article class="process-step">
+            <div class="step-no">04</div>
+            <div>
+              <h3>小ロットの初回提案から開始</h3>
+              <p>必要に応じてサンプルや条件提示を行い、初回の問い合わせ・商談化を目指します。</p>
+            </div>
+          </article>
+          <article class="process-step">
+            <div class="step-no">05</div>
+            <div>
+              <h3>受注後、製造・撮影・梱包・発送</h3>
+              <p>窯元側の実務はチェックリストベースで進め、販売管理・顧客対応は当方が継続して担当します。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">FAQ</div>
+            <h2>窯元が気にしやすい不安に、先回りして答えます。</h2>
+          </div>
+          <p class="section-desc">
+            実際の運用では、ここを自社条件に合わせて更新してください。特にMOQ、支払い条件、梱包基準、サンプル条件は最初に明文化するのがおすすめです。
+          </p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>英語での営業や問い合わせ対応は必要ですか？<span>+</span></summary>
+            <p>基本的に海外営業・顧客対応は当方が担当する前提です。窯元側には製造、品質、写真、梱包発送の実務に集中していただく想定です。</p>
+          </details>
+          <details class="faq-item">
+            <summary>最初から大量ロットが必要ですか？<span>+</span></summary>
+            <p>いいえ。最初は3〜8 SKU程度の小さな提案から始める設計を想定しています。無理に大きく始める前提ではありません。</p>
+          </details>
+          <details class="faq-item">
+            <summary>どんな販路を想定していますか？<span>+</span></summary>
+            <p>高級寿司・割烹・懐石・ホテルダイニング・ディストリビューター・調達案件など、器の見せ方と再発注の相性が良い市場を想定しています。</p>
+          </details>
+          <details class="faq-item">
+            <summary>写真撮影はどこまで必要ですか？<span>+</span></summary>
+            <p>寸法感、色味、質感、底面、梱包前後など、チェックリストに沿って必要項目を揃えていただく想定です。高品質なスタジオ撮影より、必要情報が抜けないことを重視します。</p>
+          </details>
+          <details class="faq-item">
+            <summary>梱包や発送に不安があります。<span>+</span></summary>
+            <p>破損防止や発送確認は共通のチェックリストで運用します。初回は無理のない範囲で基準を合わせ、継続しやすい形に整えます。</p>
+          </details>
+          <details class="faq-item">
+            <summary>支払い条件はどうなりますか？<span>+</span></summary>
+            <p>実際の条件は取引設計によりますが、LP上では「支払いタイミング」「入金方法」「見積時に確認する項目」を明文化しておくと安心です。</p>
+          </details>
+          <details class="faq-item">
+            <summary>継続発注につながるかが気になります。<span>+</span></summary>
+            <p>初回から、補充しやすいSKU、再発注時の納期、破損時対応などを整理しておくことで、単発で終わりにくい提案にしやすくなります。</p>
+          </details>
+          <details class="faq-item">
+            <summary>将来的にサンプル販売や決済導線も追加できますか？<span>+</span></summary>
+            <p>はい。このページはGitHub Pages向けの単一HTMLで、後からフォームURLやStripeリンクを差し替えやすい構造にしています。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-wrap" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-copy">
+            <div class="section-tag">問い合わせ</div>
+            <h2>まずは、提携できそうかを<br>相談するところから始めませんか。</h2>
+            <p>
+              得意な作風、対応可能な数量、納期感、写真や梱包の対応可否が分かるだけでも、初回の相談は十分です。
+              営業や英語対応まで一人で抱えず、役割分担の前提で海外展開を検討できます。
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" id="inquiryButton" href="mailto:partner@example.com?subject=%E7%AA%AF%E5%85%83%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E7%9B%B8%E8%AB%87">窯元パートナー相談を申し込む</a>
+            <a class="btn btn-secondary hidden" id="docButton" href="#" target="_blank" rel="noopener">事業概要資料を見る</a>
+            <a class="btn btn-secondary hidden" id="stripeButton" href="#" target="_blank" rel="noopener">サンプル・説明会を申し込む</a>
+            <div class="contact-note" id="contactNote">下部の設定ブロックで、問い合わせ先・フォームURL・資料URL・Stripeリンクを差し替えられます。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><span id="footerBrand">ARITA EXPORT PARTNER</span> — 有田焼の海外展開を、窯元が参加しやすい役割分担で進めるための窯元向けLP。</p>
+    </div>
+  </footer>
+
+  <script>
+    const SITE_CONFIG = {
+      brandName: "ARITA EXPORT PARTNER",
+      inquiryEmail: "partner@example.com",
+      emailSubject: "窯元パートナー相談",
+      formEndpoint: "",
+      docUrl: "",
+      stripeSampleUrl: ""
+    };
+
+    const brandElements = [document.getElementById("brandName"), document.getElementById("footerBrand")];
+    brandElements.forEach((el) => {
+      if (el && SITE_CONFIG.brandName) el.textContent = SITE_CONFIG.brandName;
+    });
+
+    const inquiryButton = document.getElementById("inquiryButton");
+    const docButton = document.getElementById("docButton");
+    const stripeButton = document.getElementById("stripeButton");
+    const contactNote = document.getElementById("contactNote");
+
+    const encodedSubject = encodeURIComponent(SITE_CONFIG.emailSubject || "窯元パートナー相談");
+
+    if (SITE_CONFIG.formEndpoint) {
+      inquiryButton.href = SITE_CONFIG.formEndpoint;
+      inquiryButton.target = "_blank";
+      inquiryButton.rel = "noopener";
+      inquiryButton.textContent = "提携相談フォームを開く";
+    } else {
+      inquiryButton.href = `mailto:${SITE_CONFIG.inquiryEmail}?subject=${encodedSubject}`;
+    }
+
+    if (SITE_CONFIG.docUrl) {
+      docButton.href = SITE_CONFIG.docUrl;
+      docButton.classList.remove("hidden");
+    }
+
+    if (SITE_CONFIG.stripeSampleUrl) {
+      stripeButton.href = SITE_CONFIG.stripeSampleUrl;
+      stripeButton.classList.remove("hidden");
+    }
+
+    if (
+      SITE_CONFIG.inquiryEmail !== "partner@example.com" ||
+      SITE_CONFIG.formEndpoint ||
+      SITE_CONFIG.docUrl ||
+      SITE_CONFIG.stripeSampleUrl
+    ) {
+      contactNote.textContent = "設定を更新済みです。このページは公開用の問い合わせLPとして使えます。";
+    }
+  </script>
+</body>
+</html>
